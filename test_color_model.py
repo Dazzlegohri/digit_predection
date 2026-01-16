@@ -16,19 +16,19 @@ from tensorflow.keras.models import load_model
 # =========================
 # CONFIG
 # =========================
-N = 1000                # Number of images to test
+N = 100              # Number of images to test
 SHOW_IMAGES = True     # False if you don't want images
 
 # =========================
 # LOAD MODEL
 # =========================
 model = load_model("digit_optimised_model.h5")
-print("✅ Model loaded")
+print("Model loaded")
 
 # =========================
 # TEST IMAGES PATH
 # =========================
-test_images_path = "/Users/dazzle/Downloads/mnist-images/0-9 test images/suffeled_data"
+test_images_path = "/Users/dazzle/Downloads/colorized-MNIST-master/testing/0"
 
 test_images = sorted(
     glob(os.path.join(test_images_path, "*.png")) +
@@ -36,7 +36,7 @@ test_images = sorted(
 )
 
 if len(test_images) == 0:
-    raise ValueError("❌ No test images found. Check folder path.")
+    raise ValueError(" No test images found. Check folder path.")
 
 print("Total test images available:", len(test_images))
 print("Images tested:", min(N, len(test_images)))
@@ -106,6 +106,6 @@ for image_path in test_images[:tested_images]:
 # =========================
 if tested_images > 0:
     overall_accuracy = (correct / tested_images) * 100
-    print(f"\n✅ Overall Accuracy on tested images: {overall_accuracy:.2f}%")
+    print(f"\n Overall Accuracy on tested images: {overall_accuracy:.2f}%")
 else:
-    print("❌ No images were tested.")
+    print(" No images were tested.")

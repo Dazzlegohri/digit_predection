@@ -55,7 +55,7 @@ import matplotlib.pyplot as plt
 from tensorflow.keras.models import load_model
 
 
-N = 10000             # Images that u want to test
+N = 100           # Images that u want to test
 SHOW_IMAGES = True     # false if don't want images
 
 
@@ -63,7 +63,7 @@ model = load_model("digit_model.h5")
 print(" Model loaded")
 
 
-test_images_path = "/Users/dazzle/Downloads/mnist-images/0-9 test images/0-9 test images"
+test_images_path = "/Users/dazzle/Downloads/mnist-images/0-9 test images/test_random"
 
 test_images = sorted(
     glob(os.path.join(test_images_path, "*.png")) +

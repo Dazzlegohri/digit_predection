@@ -75,4 +75,4 @@ model.fit(
 
 
 model.save("digit_model.h5")
-print("✅ Model saved as digit_model.h5")
+print("Model saved as digit_model.h5")

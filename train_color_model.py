@@ -82,8 +82,8 @@ model.compile(
 model.fit(
     X,
     y,
-    epochs=20,
-    batch_size=32,
+    epochs=30,
+    batch_size=1,
     shuffle=True
 )
 
